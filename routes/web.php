@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\FAQController;
+use App\Http\Controllers\PostFeedController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,21 +18,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/posts/{post}', function ($post) {
-    $posts = [
-        'my-first-post' => 'Hello, this is my first blog post!',
-        'my-second-post' => 'Now I am getting the hang of this blogging thing.'
-    ];
-
-    if (!array_key_exists($post, $posts)) {
-        abort(404, 'Sorry, that post was not found.');
-    }
-
-    return view('post', [
-        'post' => $posts[$post]
-    ]);
-});
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [WelcomeController::class, 'show']);
+Route::get('/dashboard', [DashboardController::class, 'show']);
+Route::get('/portfolio', [PortfolioController::class, 'show']);
+Route::get('/faq', [FAQController::class, 'show']);
+Route::get('/post-feed', [PostFeedController::class, 'show']);

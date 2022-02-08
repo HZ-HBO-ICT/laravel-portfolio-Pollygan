@@ -1,0 +1,149 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    background-color: #e1e8fcd0;
+}
+
+/*Nav bar*/
+
+header{
+    width: 100%;
+    height: 70px;
+    background-color: #553B4B;
+}
+.port {
+    position: absolute;
+    padding: 3px;
+    float: left;
+    margin-left: 0%;
+    margin-top: 8px;
+    font-family: 'Alfa Slab One',cursive;
+    color: #bdb4c7;
+    font-size: 30px;
+}
+
+span{
+    color: #FBD7DC;
+}
+
+.navbar {
+
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+}
+
+ul{
+    width: auto;
+    float: right;
+    margin-top: 8px;
+
+}
+
+li{
+    display: inline-block;
+    padding: 15px 30px;
+}
+
+a{
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2vw;
+}
+
+a:hover{
+    color:#B24F5D;
+    transition: 0,5s;
+}
+
+/*End of Nav bar*/
+
+/*Bubble for active page */
+
+.active {
+    color: #553B4B;
+    background-color: #FBD7DC;
+    border-radius: 100px;
+    border-color: #181213;
+    border-style: solid;
+    padding: 10px;
+}
+    /* Dashboard */
+
+ main {
+     margin-left: 24%;
+     margin-top: 20%;
+    }
+
+#name {
+    position: absolute;
+    left: 5%;
+    padding: 3px;
+    float: left;
+    margin-top: 8px;
+    font-family: 'Alfa Slab One',cursive;
+    color: #bdb4c7;
+    font-size: 30px;
+}
+
+        body {
+        overflow: scroll;
+      }
+
+      table, th, td {
+          border: 3px solid #634657;
+          border-collapse: collapse;
+      }
+
+      th {
+        background-color: #ABA3B3;
+        padding: 10px 10px 10px 10px;
+        color: #31222b;
+      }
+
+      table {
+        margin-top: 10%;
+        margin-left: 5%;
+      }
+
+      .num {
+        text-align: center;
+        background-color: #b1969a;
+      }
+
+      td {
+        padding: 5px 5px 5px 5px;
+      }
+
+/* Legend about the table */
+
+      .list {
+         list-style: none;
+         position: absolute;
+         left: 27%;
+         top: 20%;
+         font-size: large;
+         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      }
+
+     /* NBSA */
+
+      progress{
+        width: 350px;
+        height: 40px;
+        margin-top: 5%;
+      }
+
+      footer {
+          margin-left: 15%;
+      }
+
+    
