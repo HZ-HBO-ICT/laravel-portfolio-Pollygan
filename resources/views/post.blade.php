@@ -11,8 +11,7 @@
     <title>Document</title>
 </head>
 <body>
+    <pb>{{ $post->body }}</pb>
     <h1>My Blog Post</h1>
-
-    <p>{{ $post }}</p>
 </body>
 </html>

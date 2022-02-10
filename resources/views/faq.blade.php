@@ -10,7 +10,6 @@
 </head>
 
 <body>
-
 <header class="navbar">
     <h1 id="name">Paolina Ganeva</h1>
     <nav>
@@ -27,6 +26,17 @@
     <div class="wrapper">
         <h6>FAQ</h6>
 
+        <ul>
+            @foreach($faq as $post)
+                <li>{{ $post->question }}</li>
+            @endforeach
+        </ul>
+
+        <ul>
+            @foreach($faq as $post)
+                <li>{{ $post->answer }}</li>
+            @endforeach
+        </ul>
         <div class="wrap-1">
             <input type="radio" id="tab-1" name="tabs">
             <label for="tab-1"><div>1. How can you print a document from your laptop at HZ?</div><div class="cross"></div></label>

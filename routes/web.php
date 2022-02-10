@@ -6,6 +6,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\FAQController;
 use App\Http\Controllers\PostFeedController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,4 @@ Route::get('/dashboard', [DashboardController::class, 'show']);
 Route::get('/portfolio', [PortfolioController::class, 'show']);
 Route::get('/faq', [FAQController::class, 'show']);
 Route::get('/post-feed', [PostFeedController::class, 'show']);
+Route::get('/post/{slug}', [PostController::class, 'show']);
