@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Grade extends Model
 {
+    /**
+     * @param $grade
+     * @return void
+     */
     public function addResult($grade)
     {
         $this->refresh();
