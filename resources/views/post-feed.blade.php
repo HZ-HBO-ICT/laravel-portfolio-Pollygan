@@ -1,30 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout')
 
+@section('header')
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Blog</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="..\css\postfeed.css">
 </head>
-
-<body>
-
-<header class="navbar">
-    <h1 id="name">Paolina Ganeva</h1>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/dashboard">Dashboard</a></li>
-            <li><a href="/faq">FAQ</a></li>
-            <li><a class="active" href="/post-feed">Post feed</a></li>
-        </ul>
-    </nav>
-</header>
-
-
+@endsection
+@section('content')
 <!--Blog 1-->
 
 <div class="flip-box">
@@ -73,8 +55,8 @@
     <br>
     <br>
     My feedback very much helped me get to know myself better. Who I am as a person . But my opportunities were kinda the same as my strength and I had to put more information about me on the SKC document. I learned that sometimes I have to go with the flow, and not stress all the time about organizing.</p>
-
-<footer>
+@endsection
+@section('footer')
     <!--My dream job-->
 
     <p class="b5"><bold style="font-size: 30px; width: 20px;height: 20px;font-family: 'Alfa Slab One',cursive;">Just why?</bold>
@@ -82,7 +64,8 @@
         <br>
         IT the thing you heard me talk about in this blog a lot. Most of my childhood I was on a computer playing games you know like a normal girl. Because of that I started to think how I can make that game or how I could improve this website, also I am a very creative person and I randomly come up with solutions that could make peoples life more easier or help them. IT is the future and I want to be part of it. I find it fascinating how technologies improve every year, how they work and what you could do with just technologies these days and they are everywhere. My dream job was to become a web designer beacuse I know I like IT and I'm very creative person, but then I learned about web development and I found out that is not only about designing the websites, it's about bulding and maintaining the whole aspect of the websites it's more complicated than just design and creativeness.This job is much harder and I like that tought and I just want to prove myself as a woman that I could be a web developer and be in the IT field.</p>
 
-</footer>
+@endsection
 
-</body>
-</html>
+
+
+

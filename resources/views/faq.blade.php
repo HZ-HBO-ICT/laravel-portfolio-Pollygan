@@ -1,28 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout')
+
+@section('header')
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FAQ</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href=".\css\faq.css">
+    <title>FAQ</title>
 </head>
-
-<body>
-<header class="navbar">
-    <h1 id="name">Paolina Ganeva</h1>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/dashboard">Dashboard</a></li>
-            <li><a class="active" href="/faq">FAQ</a></li>
-            <li><a href="/post-feed">Post feed</a></li>
-        </ul>
-    </nav>
-</header>
-
-<main>
+@endsection
+@section('content')
     <div class="wrapper">
         <h6>FAQ</h6>
 
@@ -68,7 +52,4 @@
             <div class="content">Free parking is possible on the car park of PZEM at the Poelendaelesingel 10 in Middelburg. Students and staff can only enter by presenting their HZ pass at the barriers, guests can ring the bell at the barrier. After passing the barrier, follow the signs to the HZ parking places, marked with a white sign with the HZ logo.</div>
         </div>
     </div>
-</main>
-
-</body>
-</html>
+@endsection

@@ -10,8 +10,8 @@ body {
 }
 /* Nav bar */
 header{
-    width: 100%;
-    height: 70px;
+    width: 50%;
+    height: 50px;
     background-color: #553B4B;
 
 }
@@ -90,7 +90,7 @@ a:hover{
     margin-left: 23%;
     border-color: #c2a3a7;
     border-style: outset;
-    
+
 /* End of bubble */
 }
 img.pic {
@@ -244,7 +244,7 @@ label #cancel {
     height: 60px;
     padding-top: 4px;
     padding-left: 38%;
-    
+
 }
 /*Icons*/
 
@@ -274,7 +274,7 @@ label #cancel {
     height: 420px;
     margin-top: 1%;
     margin-left: 27%;
- 
+
     border-color: #ABA3B3;
     border-style: outset;
     border-width: medium;
@@ -293,7 +293,7 @@ label #cancel {
     background-color: #b89292;
     padding: 0px 5px 0px 5px;
 
-   
+
 }
 /* circles */
 #yellow {
@@ -320,7 +320,7 @@ label #cancel {
     border-width: small;
     border-style: solid;
     border-radius: 50%;
-    
+
 }
 
 .cr2 {

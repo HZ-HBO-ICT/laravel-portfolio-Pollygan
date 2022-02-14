@@ -1,21 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout')
 
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href=".\css\style.css">
-
-</head>
-
-<body>
-
-<header class="navbar">
-
+@section('sidebar')
     <!--Side bar-->
     <input type="checkbox" id="check">
     <label for="check">
@@ -35,40 +20,37 @@
         </ul>
     </div>
 
-    <!--Navbar-->
-
     <h1><a href="/portfolio" class="port">Paolina Ganeva</a></h1>
-    <ul>
-        <li><a class="active" href="/index">Home</a></li>
-        <li><a href="/dashboard">Dashboard</a></li>
-        <li><a href="/faq">FAQ</a></li>
-        <li><a href="/post-feed">Post feed</a></li>
-    </ul>
+@endsection
 
-</header>
+@section('content')
+    <head>
+        <link rel="stylesheet" href=".\css\style.css">
+        <title>Home page</title>
+    </head>
+        <!--Navbar-->
 
-<span>
+    <span>
         <p class="bubbletext"> Hello there! My name is Paolina,i'm 19 years old and i'm from Bulgaria.I began my journey since 15 year old by going to a school with an ICT program. There I learned the history of the computers, also learned how to work with Microsoft appliences like Excel and Word. Followed by the basics of HTML,CSS and C#. I've perticipated in a lot of school projects like "Coding week". Since a teenager I was very interested in computers "How they work?", "How can i change it to be better?" ect., from there I wanted to be able to make that change and improve tehnologies, that grew on me as a dream to become a web developer or web designer.I wanted  this dream to come true as I was doing this program and participating in all the projects, I  even started to do online courses.Now continuing that dream I'am more ambitious than ever.</p>
       </span>
-<a href="https://www.socialmediatoday.com/news/8-of-the-most-important-html-tags-for-seo/574987/">
-    <img src="..\pictures\me.JPG" alt="Profile picture" class="pic"></a>
+    <a href="https://www.socialmediatoday.com/news/8-of-the-most-important-html-tags-for-seo/574987/">
+        <img src="..\pictures\me.JPG" alt="Profile picture" class="pic"></a>
 
-<!--Social media-->
+    <!--Social media-->
 
-<ul class="social">
-    <li><img src="..\logo-instagram.svg" alt="Instagram" class="instagram"> : @ganevaa.p</li>
-    <br>
-    <li><img src="..\logo-facebook.svg" alt="Facebook" class="facebook">  : Паолина Ганева</li>
-    <br>
-    <li><img src="..\logo-linkedin.svg" alt="Linkedin" class="linkedin">  : Paolina Ganeva</li>
-</ul>
+    <ul class="social">
+        <li><img src="..\logo-instagram.svg" alt="Instagram" class="instagram"> : @ganevaa.p</li>
+        <br>
+        <li><img src="..\logo-facebook.svg" alt="Facebook" class="facebook">  : Паолина Ганева</li>
+        <br>
+        <li><img src="..\logo-linkedin.svg" alt="Linkedin" class="linkedin">  : Paolina Ganeva</li>
+    </ul>
 
-<img src="..\pictures\pic.jpg" alt="Old school photo" class="pic1">
+    <img src="..\pictures\pic.jpg" alt="Old school photo" class="pic1">
 
-<footer>
-    <p id="bubbletext">ICT program fits perfectly with my excpectations. Continuing with the studies I can now learn all the knowladge for my fututyre job.The best thing about Hz and the program is that here are a lot of international students that means you could meet people from all over the world. Here while learning you get the chance to practice and put this knowladge in projects, and I  think that's how you'll learn the best. This program meets my excpectations by having also IT buissnes because rather than just making sites or programs you have to know how to sell your stuff. I came here to make my dream come true and so I will.</p>
-    <img src="..\pictures\hz.png" alt="Hz logo" class="hz">
-</footer>
+    <footer>
+        <p id="bubbletext">ICT program fits perfectly with my excpectations. Continuing with the studies I can now learn all the knowladge for my fututyre job.The best thing about Hz and the program is that here are a lot of international students that means you could meet people from all over the world. Here while learning you get the chance to practice and put this knowladge in projects, and I  think that's how you'll learn the best. This program meets my excpectations by having also IT buissnes because rather than just making sites or programs you have to know how to sell your stuff. I came here to make my dream come true and so I will.</p>
+        <img src="..\pictures\hz.png" alt="Hz logo" class="hz">
+    </footer>
 
-</body>
-</html>
+@endsection
