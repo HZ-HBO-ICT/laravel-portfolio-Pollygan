@@ -1,10 +1,10 @@
 @extends('layout')
-
+<head>
+    <link rel="stylesheet" href="..\css\dashboard.css">
+    <title>Dashboard</title>
+</head>
 @section('header')
-    <head>
-        <link rel="stylesheet" href="..\css\dashboard.css">
-        <title>Dashboard</title>
-    </head>
+
 @endsection
 @section('content')
         <table>
@@ -19,35 +19,15 @@
             </thead>
             <tbody>
             <tr class="solid">
-                <td rowspan="3" class="num">1</td>
-                <td>Programm and Career Orientation </td>
-                <td>2,5</td>
-                <td>Assassment</td>
-                <td></td>
+                <td rowspan="5" class="num">1</td>
+                <!--It is usually the folder and the name of the table-->
+                @foreach($grades as $grades)
+                <td>{{$grades->course_name}}</td>
+                <td>{{$grades->EC}}</td>
+                <td>{{$grades->test_name}}</td>
+                <td>{{$grades->best_grade}}</td>
             </tr>
-            <tr class="solid">
-                <td>Computer Science Basics</td>
-                <td>5</td>
-                <td>Written exam</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Programing Basics</td>
-                <td>5</td>
-                <td>Case study</td>
-                <td></td>
-            </tr>
-            <tr class="solid">
-                <td rowspan="2" class="num">2</td>
-                <td rowspan="2">Object Oriented Programming</td>
-                <td rowspan="2">10</td>
-                <td>Case study</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Project</td>
-                <td></td>
-            </tr>
+            @endforeach
             <tr class="solid">
                 <td rowspan="4" class="num">3</td>
                 <td>Framework Development 1</td>

@@ -5,8 +5,7 @@ use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\FAQController;
-use App\Http\Controllers\PostFeedController;
-use App\Http\Controllers\PostController;
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +21,35 @@ use App\Http\Controllers\PostController;
 Route::get('/', [WelcomeController::class, 'show']);
 Route::get('/dashboard', [DashboardController::class, 'show']);
 Route::get('/portfolio', [PortfolioController::class, 'show']);
-Route::get('/faq', [FAQController::class, 'show']);
-Route::get('/post-feed', [PostFeedController::class, 'show']);
-Route::get('/post/{slug}', [PostController::class, 'show']);
+
+// Create
+Route::get('/post-feed/create', [BlogController::class, 'create']);
+Route::post('/articles', [BlogController::class, 'store']);
+
+// Read
+Route::get('/post-feed', [BlogController::class, 'index']);
+Route::get('/post-feed/{article}', [BlogController::class, 'show']);
+
+// Update
+Route::get('/post-feed/{article}/edit', [BlogController::class, 'edit']);
+Route::put('/articles/{article}', [BlogController::class, 'update']);
+
+// Delete
+Route::delete('/articles/{article}', [BlogController::class, 'destroy']);
+
+// Create for the Faqs
+Route::get('/faq/create', [FAQController::class, 'create']);
+Route::post('/faqs', [FAQController::class, 'store']);
+
+// Read
+Route::get('/faq', [FAQController::class, 'index']);
+Route::get('/faq/{faq}', [FAQController::class, 'show']);
+
+
+// Update
+Route::get('/faq/{faq}/edit', [FAQController::class, 'edit']);
+Route::put('/faqs/{faq}', [FAQController::class, 'update']);
+
+// Delete
+Route::delete('/faqs/{faq}', [FAQController::class, 'destroy']);
+x

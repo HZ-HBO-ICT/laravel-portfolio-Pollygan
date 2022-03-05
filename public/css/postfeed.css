@@ -81,7 +81,7 @@ a:hover{
   padding: 10px;
 }
 
- /* Blog 1 */
+ /* Article 1 */
 
 .flip-box {
   background-color: transparent;
@@ -130,14 +130,14 @@ h2 {
    font-size: 20px;
    margin-top: 10%;
 }
-  
+
 p {
   padding: 0px 30px 5px 30px;
   margin-top: 30px;
-  
+
 }
 
- /*Blog 2*/
+ /*Article 2*/
 
 .flip-box2 {
   background-color: transparent;
@@ -145,8 +145,8 @@ p {
   height: 320px;
   border: 1px solid #f1f1f1;
   perspective: 1000px;
-  margin-left: 50%;
-  margin-top: 5%;
+  margin-left: 55%;
+  margin-top: -350px;
 }
 
 .flip-box-inner2 {
@@ -186,23 +186,17 @@ h3 {
    font-size: 20px;
    margin-top: 10%;
 }
-  
+
 .swot {
   padding: 0px 30px 5px 30px;
   margin-top: 30px;
-  
+
 }
 
- /* Blog 3 */
+ /* Article 3 */
 
 .pe {
   background-color: #FBD7DC;
-  width: 500px;
-  height: 350px;
-  padding: 50px;
-  margin: 20px;
-  margin-top: -70%;
-  margin-left: 50%;
   border-radius: 50px;
   border-style: outset;
   border-color: #898291;
@@ -211,34 +205,54 @@ h3 {
 
 }
 
-/*Blog 4*/
+/*Article 4*/
 
 .ff {
   background-color: #FBD7DC;
-  width: 300px;
-  height: 250px;
-  padding: 50px;
-  margin: 20px;
-  margin-top: 6%;
-  margin-left: 6%;
   border-radius: 50px;
   border-style: outset;
   border-color: #898291;
   font-size: large;
   text-align: center;
 }
-  
+
 .b5 {
   background-color: #FBD7DC;
-  width: 70%;
-  height: 250px;
-  padding: 50px;
-  margin: 20px;
-  margin-top: 6%;
-  margin-left: 6%;
   border-radius: 50px;
   border-style: outset;
   border-color: #898291;
   font-size: large;
   text-align: center;
 }
+
+h1 {
+
+    padding: 3px;
+    margin-left: 30%;
+    margin-top: 100px;
+    font-family: 'Alfa Slab One', cursive;
+    color: #362929;
+    font-size: 50px;
+}
+
+.text {
+
+    margin-left: 10%;
+    margin-top: 150px;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 20px;
+}
+
+input {
+    width: 300px;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 400px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+
