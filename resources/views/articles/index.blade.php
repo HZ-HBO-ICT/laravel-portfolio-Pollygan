@@ -49,7 +49,7 @@
 <p class="{{$article->class}}"><bold style="font-size: 30px; width: 20px;height: 20px;font-family: 'Alfa Slab One',cursive;">{{$article->title}}</bold>
     <br>
     <br>
-    {{$article->excerpt}}<a href="/post-feed/{{ $article->id }}">click for more</a></p>
+    {{$article->excerpt}}<a href="{{ $article->path() }}">click for more</a></p>
 @endforeach
 </body>
 @endsection

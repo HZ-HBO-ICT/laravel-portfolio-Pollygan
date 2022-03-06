@@ -13,9 +13,8 @@ class FAQController
     /**
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function show($id)
+    public function show(Faq $faq)
     {
-        $faq = Faq::find($id);
         return view('faqs.show', [
             'faq' => $faq
         ]);
@@ -26,41 +25,33 @@ class FAQController
     }
     public function store()
     {
-        // Creating a new faq
-        $faq = new Faq();
+        Faq::create($this->validateFaq());
 
-        // setting its values to be according to the data from the form
-        $faq->question = request('question');
-        $faq->answer = request('answer');
-        $faq->link = request('link');
-
-        $faq->save();
-
-        return redirect('/faq');
+        return redirect(route('faqs.index'));
     }
-    public function edit($id)
+    public function edit(Faq $faq)
     {
-        // find the article associated with the id
-        $faq = Faq::find($id);
-
         return view('faqs.edit', ['faq'=> $faq]);
     }
-    public function update($id)
+    public function update(Faq $faq)
     {
-        $faq = Faq::find($id);
+        $faq->update($this->validateFaq());
 
-        $faq->question = request('question');
-        $faq->answer = request('answer');
-        $faq->link = request('link');
-
-        $faq->save();
-
-        return redirect('/faq/' . $faq->id);
+        return redirect($faq->path());
     }
-    public function destroy($id)
+    public function destroy(Faq $faq)
     {
-        $faq = Faq::find($id);
         $faq->delete();
         return redirect('/faq');
+    }
+
+
+    protected function validateFaq()
+    {
+        return request()->validate([
+            'question' => 'required',
+            'answer' => 'required',
+            'link' => 'required'
+        ]);
     }
 }

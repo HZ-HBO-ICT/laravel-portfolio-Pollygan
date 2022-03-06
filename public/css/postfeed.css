@@ -242,7 +242,7 @@ h1 {
     font-family: 'Alfa Slab One', cursive;
     font-size: 20px;
 }
-
+/* Styling for the form*/
 input {
     width: 300px;
     padding: 12px;
@@ -254,5 +254,7 @@ textarea {
     padding: 30px;
     box-sizing: border-box;
 }
+
+
 
 

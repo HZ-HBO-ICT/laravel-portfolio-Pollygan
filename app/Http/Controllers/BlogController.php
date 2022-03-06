@@ -19,9 +19,8 @@ class BlogController
      * @param $id
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function show($id)
+    public function show(Article $article)
     {
-        $article = Article::find($id);
         return view('articles.show', [
             'article' => $article
         ]);
@@ -34,45 +33,37 @@ class BlogController
 
     public function store()
     {
-        $article = new Article();
+        Article::create($this->validateArticle());
 
-        $article->title = request('title');
-        $article->excerpt = request('excerpt');
-        $article->body = request('body');
-        $article->class = request('class');
-
-        $article->save();
-
-        return redirect('/post-feed');
+        return redirect(route('articles.index'));
     }
 
-    public function edit($id)
+    public function edit(Article $article)
     {
-        // find the article associated with the id
-        $article = Article::find($id);
-
         return view('articles.edit', ['article'=> $article]);
     }
 
-    public function update($id)
+    public function update(Article $article)
     {
-        $article = Article::find($id);
+        $article->update($this->validateArticle());
 
-        $article->title = request('title');
-        $article->excerpt = request('excerpt');
-        $article->body = request('body');
-        $article->class = request('class');
-
-        $article->save();
-
-        return redirect('/post-feed/' . $article->id);
+        return redirect($article->path());
     }
 
-    public function destroy($id)
+    public function destroy(Article $article)
     {
-        $article = Article::find($id);
         $article->delete();
 
         return redirect('/post-feed');
+    }
+
+    protected function validateArticle()
+    {
+        return request()->validate([
+            'title' => 'required',
+            'excerpt' => 'required',
+            'body' => 'required',
+            'class' => 'required'
+        ]);
     }
 }

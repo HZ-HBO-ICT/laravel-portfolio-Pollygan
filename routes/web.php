@@ -27,8 +27,8 @@ Route::get('/post-feed/create', [BlogController::class, 'create']);
 Route::post('/articles', [BlogController::class, 'store']);
 
 // Read
-Route::get('/post-feed', [BlogController::class, 'index']);
-Route::get('/post-feed/{article}', [BlogController::class, 'show']);
+Route::get('/post-feed', [BlogController::class, 'index'])->name('articles.index');
+Route::get('/post-feed/{article}', [BlogController::class, 'show'])->name('articles.show');
 
 // Update
 Route::get('/post-feed/{article}/edit', [BlogController::class, 'edit']);
@@ -42,8 +42,8 @@ Route::get('/faq/create', [FAQController::class, 'create']);
 Route::post('/faqs', [FAQController::class, 'store']);
 
 // Read
-Route::get('/faq', [FAQController::class, 'index']);
-Route::get('/faq/{faq}', [FAQController::class, 'show']);
+Route::get('/faq', [FAQController::class, 'index'])->name('faqs.index');
+Route::get('/faq/{faq}', [FAQController::class, 'show'])->name('faqs.show');
 
 
 // Update
@@ -52,4 +52,3 @@ Route::put('/faqs/{faq}', [FAQController::class, 'update']);
 
 // Delete
 Route::delete('/faqs/{faq}', [FAQController::class, 'destroy']);
-x

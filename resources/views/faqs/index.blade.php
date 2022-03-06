@@ -15,7 +15,7 @@
                 <input type="radio" id={{$faqs->link}} name="tabs">
                 <label for={{$faqs->link}}><div>{{$faqs->question}}</div>
                     <div class="cross"></div></label>
-                <div class="content">{{$faqs->answer}}<a href="/faq/{{$faqs->id}}">click to page</a></div>
+                <div class="content">{{$faqs->answer}}<a href="{{ $faqs->path() }}">click to page</a></div>
             </div>
         @endforeach
     </div>

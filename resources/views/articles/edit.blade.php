@@ -19,7 +19,7 @@
         <textarea class="textarea" name="excerpt" id="excerpt">{{$article->excerpt}}</textarea><br>
 
         <label for="body">Body</label><br>
-        <textarea class="textarea" name="body" id="body">{{$article->body}}</textarea>
+        <textarea class="textarea" name="body" id="body">{{$article->body}}</textarea><br>
 
         <label for="class">Class</label><br>
         <input type="text" name="class" id="class" value="{{$article->class}}">
