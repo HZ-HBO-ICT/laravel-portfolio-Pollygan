@@ -1,8 +1,8 @@
 @extends('layout')
-<head>
+@section('head')
     <link rel="stylesheet" href="..\css\dashboard.css">
     <title>Dashboard</title>
-</head>
+@endsection
 @section('header')
 
 @endsection
@@ -21,11 +21,11 @@
             <tr class="solid">
                 <td rowspan="5" class="num">1</td>
                 <!--It is usually the folder and the name of the table-->
-                @foreach($grades as $grades)
-                <td>{{$grades->course_name}}</td>
-                <td>{{$grades->EC}}</td>
-                <td>{{$grades->test_name}}</td>
-                <td>{{$grades->best_grade}}</td>
+                @foreach($grades as $grade)
+                <td>{{$grade->course_name}}</td>
+                <td>{{$grade->EC}}</td>
+                <td>{{$grade->test_name}}</td>
+                <td>{{$grade->best_grade}}</td>
             </tr>
             @endforeach
             <tr class="solid">

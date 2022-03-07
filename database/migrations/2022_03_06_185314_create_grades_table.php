@@ -13,7 +13,6 @@ class CreateGradesTable extends Migration
      */
     public function up()
     {
-        // Table name is grades
         Schema::create('grades', function (Blueprint $table) {
             $table->id();
             $table->string('course_name');

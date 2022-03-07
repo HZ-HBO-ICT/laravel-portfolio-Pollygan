@@ -6,6 +6,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\FAQController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\GradeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,7 @@ use App\Http\Controllers\BlogController;
 Route::get('/', [WelcomeController::class, 'show']);
 Route::get('/dashboard', [DashboardController::class, 'show']);
 Route::get('/portfolio', [PortfolioController::class, 'show']);
+Route::resource('/grades', GradeController::class);
 
 // Create
 Route::get('/post-feed/create', [BlogController::class, 'create']);

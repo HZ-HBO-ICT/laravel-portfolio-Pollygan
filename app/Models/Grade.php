@@ -7,10 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Grade extends Model
 {
-    /**
-     * @param $grade
-     * @return void
-     */
+    use HasFactory;
+
     public function addResult($grade)
     {
         $this->refresh();
