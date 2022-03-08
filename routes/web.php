@@ -1,6 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\FAQController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\GradeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,21 +19,38 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/posts/{post}', function ($post) {
-    $posts = [
-        'my-first-post' => 'Hello, this is my first blog post!',
-        'my-second-post' => 'Now I am getting the hang of this blogging thing.'
-    ];
+Route::get('/', [WelcomeController::class, 'show']);
+Route::get('/dashboard', [DashboardController::class, 'show']);
+Route::get('/portfolio', [PortfolioController::class, 'show']);
+Route::resource('/grades', GradeController::class);
 
-    if (!array_key_exists($post, $posts)) {
-        abort(404, 'Sorry, that post was not found.');
-    }
+// Create
+Route::get('/post-feed/create', [BlogController::class, 'create']);
+Route::post('/articles', [BlogController::class, 'store']);
 
-    return view('post', [
-        'post' => $posts[$post]
-    ]);
-});
+// Read
+Route::get('/post-feed', [BlogController::class, 'index'])->name('articles.index');
+Route::get('/post-feed/{article}', [BlogController::class, 'show'])->name('articles.show');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Update
+Route::get('/post-feed/{article}/edit', [BlogController::class, 'edit']);
+Route::put('/articles/{article}', [BlogController::class, 'update']);
+
+// Delete
+Route::delete('/articles/{article}', [BlogController::class, 'destroy']);
+
+// Create for the Faqs
+Route::get('/faq/create', [FAQController::class, 'create']);
+Route::post('/faqs', [FAQController::class, 'store']);
+
+// Read
+Route::get('/faq', [FAQController::class, 'index'])->name('faqs.index');
+Route::get('/faq/{faq}', [FAQController::class, 'show'])->name('faqs.show');
+
+
+// Update
+Route::get('/faq/{faq}/edit', [FAQController::class, 'edit']);
+Route::put('/faqs/{faq}', [FAQController::class, 'update']);
+
+// Delete
+Route::delete('/faqs/{faq}', [FAQController::class, 'destroy']);

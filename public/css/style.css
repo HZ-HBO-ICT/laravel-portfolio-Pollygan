@@ -1,0 +1,455 @@
+
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    background-color: #e1e8fcd0;
+}
+/* Nav bar */
+header{
+    width: 100%;
+    height: 65px;
+    background-color: #553B4B;
+
+}
+/* Paolina Ganeva */
+.port {
+    position: absolute;
+    padding: 3px;
+    float: left;
+    margin-left: 0%;
+    margin-top: 8px;
+    font-family: 'Alfa Slab One',cursive;
+    color: #bdb4c7;
+    font-size: 30px;
+}
+
+span{
+    color: #FBD7DC;
+}
+
+.navbar {
+
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+}
+
+ul{
+    width: auto;
+    float: right;
+    margin-top: 8px;
+
+}
+
+li{
+    display: inline-block;
+    padding: 15px 30px;
+}
+
+a{
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2vw;
+}
+
+a:hover{
+    color:#B24F5D;
+    transition: 0,5s;
+}
+/* End of Nav bar */
+/* active bubble for the nav bar */
+.active {
+    color: #553B4B;
+    background-color: #FBD7DC;
+    border-radius: 100px;
+    border-color: #181213;
+    border-style: solid;
+    padding: 10px;
+}
+/* Bubble text */
+.bubbletext {
+
+    font-family: sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+    width: 70%;
+    background:#FBD7DC;
+    border-radius: 50px;
+    padding: 24px;
+    text-align: center;
+    color: black;
+    margin-top: 10%;
+    margin-left: 23%;
+    border-color: #c2a3a7;
+    border-style: outset;
+
+/* End of bubble */
+}
+img.pic {
+
+    width: 500px;
+    height: 400px;
+    margin-top: 3%;
+    margin-left: 55%;
+    border-color: #B24F5D;
+    border-style: outset;
+    border-width: medium;
+}
+/* Side bar */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #ABA3B3;
+    transition: all .5s ease;
+}
+
+.sidebar h3 {
+     font-size: 25px;
+     color: #553B4B;
+     text-align: center;
+     line-height: 70px;
+     background: #c2bac9;
+     user-select: none;
+     font-family: monospace;
+}
+
+.sidebar .side a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 45px;
+    font-size: 20px;
+    color: #44445F;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border-bottom: 2px solid rgba(147, 138, 156, 0.644);
+    transition: .4s;
+}
+
+.side li:hover a {
+    padding-left: 50px;
+}
+
+.sidebar .side a i {
+    padding-left: 50px;
+}
+
+#check {
+    display: none;
+}
+
+label #btn,label #cancel {
+    position: absolute;
+    cursor: pointer;
+    background: #553B4B;
+    border-radius: 3px;
+}
+label #btn {
+    left: 40px;
+    top: 20px;
+    width: 40px;
+    height: 35px;
+}
+
+label #cancel {
+    z-index: 1111;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    padding: 4px 9px;
+    transition: all .5s ease;
+}
+
+#check:checked ~ .sidebar {
+    left: 0;
+
+}
+
+#check:checked ~ label #btn {
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~ label #cancel {
+    left: 195px;
+}
+
+#check:checked ~ .port, h1{
+    margin-left: 250px;
+}
+ /* end of side bar */
+ /* social media */
+.social {
+    color: #553B4B;
+    font-size: 27px;
+    margin-right: 55%;
+    margin-top: -28%;
+    left: 10%;
+    z-index: -1;
+    font-family: cursive;
+    font-weight: bold;
+}
+
+/* social media */
+.pic1 {
+    width: 550px;
+    height: 420px;
+    margin-top: -3px;
+    margin-left: 115px;
+    border-color: #ABA3B3;
+    border-style: outset;
+    border-width: medium;
+}
+
+
+/*Second bubble*/
+#bubbletext {
+
+    font-family: sans-serif;
+    font-size: 17px;
+    line-height: 22px;
+    width: 30%;
+    background:#FBD7DC;
+    border-radius: 50px;
+    padding: 24px;
+    text-align: center;
+    color: black;
+    margin-top: -30%;
+    margin-left: 61%;
+    border-color: #c2a3a7;
+    border-style: outset;
+}
+/*End of second bubble*/
+
+.hz {
+    width: 250px;
+    height: 60px;
+    padding-top: 50px;
+    padding-left: 0%;
+
+}
+/*Icons*/
+
+.instagram {
+    width: 30px;
+    height: 30px;
+}
+
+.facebook {
+     width: 30px;
+     height: 30px;
+}
+
+.linkedin {
+
+    width: 30px;
+    height: 30px;
+}
+ .hz {
+     margin: 30px;
+ }
+
+h6 {
+    font-size: 25px;
+    color: #553B4B;
+    line-height: 70px;
+    font-family: monospace;
+}
+/* profile page */
+
+/* Me img */
+.pic3 {
+    width: 550px;
+    height: 420px;
+    margin-top: 1%;
+    margin-left: 27%;
+
+    border-color: #ABA3B3;
+    border-style: outset;
+    border-width: medium;
+}
+/* Paolina Ganeva button */
+.port1 {
+    margin-left: 70px;
+    margin-top: 20px;
+    font-family: 'Alfa Slab One',cursive;
+    color: #362929;
+    font-size: 40px;
+    border-width: small;
+    border-color: #553B4B;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: #b89292;
+    padding: 0px 5px 0px 5px;
+
+
+}
+/* circles */
+#yellow {
+    width: 30%;
+    height: 60%;
+    position: absolute;
+    top: 145%;
+    left: 36%;
+    border-color: #e2d302f3;
+    border-width: small;
+    border-style: solid;
+    border-radius: 50%;
+    z-index: 3;
+
+}
+
+.cr1 {
+    position: absolute;
+    top: 100%;
+    left: 37%;
+    width: 26%;
+    height: 52%;
+    border-color: #d49da4;
+    border-width: small;
+    border-style: solid;
+    border-radius: 50%;
+
+}
+
+.cr2 {
+    position: absolute;
+    top: 135%;
+    left: 18%;
+    width: 26%;
+    height: 52%;
+    border-color: #d49da4;
+    border-width: small;
+    border-style: solid;
+    border-radius: 50%;
+}
+
+.cr3 {
+    position: absolute;
+    top: 130%;
+    right: 16%;
+    width: 26%;
+    height: 52%;
+    border-color: #d49da4;
+    border-width: small;
+    border-style: solid;
+    border-radius: 50%;
+}
+
+.cr4 {
+    position: absolute;
+    top: 180%;
+    right: 22%;
+    width: 26%;
+    height: 52%;
+    border-color: #d49da4;
+    border-width: small;
+    border-style: solid;
+    border-radius: 50%;
+}
+
+.cr5 {
+    position: absolute;
+    top: 185%;
+    left: 26%;
+    width: 26%;
+    height: 52%;
+    border-color: #d49da4;
+    border-width: small;
+    border-style: solid;
+    border-radius: 50%;
+}
+/* Facts about me text */
+h4 {
+    font-size: 45px;
+    font-family: fantasy;
+    position: absolute;
+    top: 170%;
+    left: 40%;
+    z-index: 4;
+    color: #863c46;
+}
+
+h5 {
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    top: 123%;
+    left: 42%;
+    z-index: 4;
+    color: #863c46;
+}
+
+.f2 {
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    top: 150%;
+    left: 63%;
+    z-index: 4;
+    color: #863c46;
+}
+
+.f3 {
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    top: 205%;
+    left: 56%;
+    z-index: 4;
+    color: #863c46;
+}
+
+.f4 {
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    top: 207%;
+    left: 35%;
+    z-index: 4;
+    color: #863c46;
+}
+
+.f5 {
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    top: 155%;
+    left: 20%;
+    z-index: 4;
+    color: #863c46;
+}
+
+.confeti {
+  margin-top: 10%;
+  width: 100%;
+  height: 1300px;
+}
+
+.text {
+
+    padding: 90px;
+    margin-top: 150px;
+    margin-left: 50px;
+    font-family: cursive;
+}
+
+
